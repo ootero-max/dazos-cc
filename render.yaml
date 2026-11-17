@@ -1,0 +1,32 @@
+# Render blueprint — web service with a persistent disk for the JSON stores.
+# Set the secret env vars in the Render dashboard (see .env.example).
+services:
+  - type: web
+    name: dazos-cc
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    disk:
+      name: dazos-cc-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /data
+      - key: WEB_APP_URL
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: BOOTSTRAP_ADMINS
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      # Optional integrations — add when ready:
+      # JIRA_SITE_URL, JIRA_CLOUD_ID, JIRA_EMAIL, JIRA_API_TOKEN
+      # SALESFORCE_INSTANCE_URL, SALESFORCE_CLIENT_ID, SALESFORCE_CLIENT_SECRET
+      # SLACK_BOT_TOKEN
+      # ANTHROPIC_API_KEY, CLAUDE_MODEL

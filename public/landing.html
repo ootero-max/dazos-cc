@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="https://dazos.com/wp-content/uploads/2026/03/favicon.png"/>
+  <title>Dazos CC</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0b1929;--bg2:#0f2132;--card:#132840;--card2:#1a3350;
+      --border:#1e3d5c;--accent:#00aaff;--accent2:#0088cc;
+      --text:#ffffff;--text2:#8aaccc;--text3:#4a7a9b;
+    }
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 40%,#0f2d4a 0%,var(--bg) 70%)}
+    .landing{text-align:center;max-width:520px;padding:0 24px}
+    .logo{margin-bottom:40px}
+    .heading{font-size:1.75rem;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:12px}
+    .heading span{color:var(--accent)}
+    .subheading{color:var(--text2);font-size:1rem;line-height:1.6;margin-bottom:48px}
+    .login-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 36px;text-align:center}
+    .login-card-title{color:var(--text2);font-size:.9rem;margin-bottom:24px}
+    .google-btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;background:var(--card2);border:1px solid var(--border);color:var(--text);font-size:.95rem;font-weight:500;padding:14px 24px;border-radius:10px;cursor:pointer;text-decoration:none;transition:background .15s,border-color .15s}
+    .google-btn:hover{background:#1e3d5c;border-color:var(--accent)}
+    .google-btn svg{flex-shrink:0}
+    .login-note{color:var(--text3);font-size:.75rem;margin-top:16px}
+    .footer{margin-top:48px;color:var(--text3);font-size:.75rem}
+  </style>
+</head>
+<body>
+  <div class="landing">
+    <div class="logo">
+      <img src="https://dazos.com/wp-content/uploads/2026/02/Logo.png" alt="Dazos" style="height:60px;width:auto;"/>
+    </div>
+
+    <h1 class="heading"><span>Dazos CC</span></h1>
+    <p class="subheading">Internal tools for the Dazos team.</p>
+
+    <div class="login-card">
+      <p class="login-card-title">Sign in to continue</p>
+      <a href="/auth/google" class="google-btn">
+        <svg width="20" height="20" viewBox="0 0 48 48">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+        Sign in with Google
+      </a>
+      <p class="login-note">Only certain @dazos.com accounts are permitted</p>
+    </div>
+
+    <p class="footer">Dazos CC</p>
+  </div>
+</body>
+</html>

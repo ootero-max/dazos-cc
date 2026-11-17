@@ -1,0 +1,21 @@
+{
+  "name": "dazos-cc",
+  "version": "1.0.0",
+  "description": "Dazos CC — internal app skeleton: Google login, Dazos look & feel, roles, integration scaffolds (Jira, Salesforce, Slack, Claude AI), and one example module to copy.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.106.0",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

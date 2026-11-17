@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+
+# Local JSON stores (live on the persistent disk in prod, in the repo dir locally)
+settings.json
+ideas.json
+/data/
+
+.DS_Store
+*.log
